@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import Banner from "./assets/Banner.png";
+import Banner from "assets/Banner.png";
 
 const GlobalStyles = createGlobalStyle`
 

@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
-import send from "../../../assets/send_button.svg";
+import send from "assets/send_button.svg";
 import cn from "classnames";
-import { useMessageContext } from "../../../context/message/messageContext";
+import { useMessageContext } from "context/message/messageContext";
 import {
   insertNodeAtCaret,
   getCaretIndex,
   updateCaret,
   isFirefox,
-} from "./editable";
+} from "utils/editable";
 
 function Sender({
   sendMessage,

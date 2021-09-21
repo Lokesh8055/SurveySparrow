@@ -5,7 +5,7 @@ import {
   FULFILLED_RESPONSE_MESSAGE,
   REJECTED_RESPONSE_MESSAGE,
 } from "../types";
-import { createNewMessage } from "../../utils/messages";
+import createNewMessage from "../../utils/messages";
 import { MESSAGE_SENDER } from "../../utils/constants";
 
 const messageReducer = (state = [], action) => {
@@ -45,7 +45,6 @@ const messageReducer = (state = [], action) => {
           ...state.messages,
           createNewMessage(receiverText, MESSAGE_SENDER.RESPONSE),
         ],
-        badgeCount: state.badgeCount + 1,
       };
     default:
       return state;

@@ -17,7 +17,6 @@ export const MessageProvider = ({ children }) => {
     messageResponse: {},
     loading: false,
     error: null,
-    badgeCount: 0,
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -45,7 +44,6 @@ export const MessageProvider = ({ children }) => {
     <MessageContext.Provider
       value={{
         messages: state.messages,
-        badgeCount: state.badgeCount,
         messageResponse: state.messageResponse,
         loading: state.loading,
         error: state.error,

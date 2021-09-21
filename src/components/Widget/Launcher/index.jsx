@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
-import openImg from "../../assets/Sparrow Bird.png";
-import closeImg from "../../assets/close.svg";
+import openImg from "assets/Sparrow Bird.png";
+import closeImg from "assets/close.svg";
 
 function Launcher({ toggle, chatId, openLabel, closeLabel, showChat }) {
   const toggleChat = () => {

@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
-import { MESSAGE_SENDER } from "../../../utils/constants";
+import React, { useRef } from "react";
+import { MESSAGE_SENDER } from "utils/constants";
 import format from "date-fns/format";
 import Loader from "./components/Loader";
-import { useMessageContext } from "../../../context/message/messageContext";
-import Sparrow from "../../../assets/sparrow favicon.png";
+import { useMessageContext } from "context/message/messageContext";
+import Sparrow from "./components/Sparrow";
 
-const Messages = ({ showTimeStamp, typing, showChat }) => {
-  const { messages, loading } = useMessageContext();
+const Messages = ({ showTimeStamp, typing }) => {
+  const { messages, loading, error } = useMessageContext();
   const messageRef = useRef(null);
 
   const isClient = (sender) => sender === MESSAGE_SENDER.CLIENT;
@@ -32,11 +32,9 @@ const Messages = ({ showTimeStamp, typing, showChat }) => {
           {getComponentToRender(message)}
         </div>
       ))}
-      <div className="sparrow">
-        <img src={Sparrow} alt="sparrow" />
-        <p>We run on surveysparrow</p>
-      </div>
+      <Sparrow />
       {loading && <Loader typing={typing} />}
+      {error && <section>{error}</section>}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { bounce } from "../style/animation";
+import { bounce } from "style/animation";
 import {
   headerfs,
   titlefs,
@@ -7,7 +7,7 @@ import {
   closefs,
   messagescontainerfs,
   messagebubble,
-} from "../style/common";
+} from "style/common";
 
 const Header = css`
   .header {

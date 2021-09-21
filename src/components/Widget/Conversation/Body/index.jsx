@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { useGlobalStateContext } from "../../../context/globalStateContext";
+import { useGlobalStateContext } from "context/globalStateContext";
 
 const Body = () => {
   const { show, setShow, subtitle } = useGlobalStateContext();

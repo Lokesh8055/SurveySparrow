@@ -1,4 +1,4 @@
-import Message from "../Widget/Conversation/Messages/components/Message";
+import Message from "../components/Widget/Conversation/Messages/components/Message";
 import { MESSAGES_TYPES } from "./constants";
 import { v4 as uuidv4 } from "uuid";
 function createNewMessage(text = "", sender) {
@@ -13,4 +13,4 @@ function createNewMessage(text = "", sender) {
   };
 }
 
-export { createNewMessage };
+export default createNewMessage;

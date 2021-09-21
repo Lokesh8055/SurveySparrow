@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import Header from "./Header";
 import Messages from "./Messages";
 import Sender from "./Sender";
-import { useMessageContext } from "../../context/message/messageContext";
+import { useMessageContext } from "context/message/messageContext";
 import Body from "./Body";
-import { useGlobalStateContext } from "../../context/globalStateContext";
+import { useGlobalStateContext } from "context/globalStateContext";
 
 const Conversation = ({
   disabledInput,
@@ -78,11 +78,7 @@ const Conversation = ({
       <Header toggleChat={toggleChat} showCloseButton={showCloseButton} />
       {show ? (
         <>
-          <Messages
-            showTimeStamp={showTimeStamp}
-            typing={typing}
-            showChat={showChat}
-          />
+          <Messages showTimeStamp={showTimeStamp} typing={typing} />
           <Sender
             ref={senderRef}
             sendMessage={handlerSendMsn}

@@ -3,9 +3,9 @@ import {
   widgetcontainerfs,
   launcherfs,
   conversationcontainerfs,
-} from "../style/common";
+} from "style/common";
 import ConversationContainer from "./ConversationContainer.style";
-import { animation, rotationlr, rotationrl, slidein } from "../style/animation";
+import { animation, rotationlr, rotationrl, slidein } from "style/animation";
 
 const Launcher = css`
   .launcher {

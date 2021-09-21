@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { useFullScreenContext } from "../context/fullScreen/fullScreenContext";
+import { useFullScreenContext } from "context/fullScreen/fullScreenContext";
 import cn from "classnames";
 import Conversation from "./Conversation";
 import Launcher from "./Launcher";
-import { useBehaviourContext } from "../context/behaviourContext";
-import { useMessageContext } from "../context/message/messageContext";
+import { useBehaviourContext } from "context/behaviourContext";
+import { useMessageContext } from "context/message/messageContext";
 import WidgetContainer from "./Widget.style";
 
 const Widget = () => {
