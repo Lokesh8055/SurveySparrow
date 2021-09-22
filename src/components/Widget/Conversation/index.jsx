@@ -27,7 +27,6 @@ const Conversation = ({
     setContainerDiv(containerDiv);
   }, []);
 
-  const [pickerOffset, setOffset] = useState(0);
   const senderRef = useRef(null);
   const [pickerStatus, setPicket] = useState(false);
 
@@ -79,7 +78,6 @@ const Conversation = ({
             disabledInput={disabledInput}
             autofocus={autofocus}
             buttonAlt={sendButtonAlt}
-            onChangeSize={setOffset}
           />
         </>
       ) : (

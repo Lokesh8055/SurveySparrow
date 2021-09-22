@@ -9,13 +9,7 @@ import {
   isFirefox,
 } from "utils/editable";
 
-function Sender({
-  sendMessage,
-  disabledInput,
-  autofocus,
-  buttonAlt,
-  onChangeSize,
-}) {
+function Sender({ sendMessage, disabledInput, autofocus, buttonAlt }) {
   const brRegex = /<br>/g;
   const inputRef = useRef(null);
   const { showChat } = useMessageContext();
@@ -66,7 +60,6 @@ function Sender({
     if (senderEl && height !== senderEl.clientHeight) {
       const { clientHeight } = senderEl;
       setHeight(clientHeight);
-      onChangeSize(clientHeight ? clientHeight - 1 : 0);
     }
   };
 

@@ -39,6 +39,7 @@ const Widget = () => {
     );
     addResponseMessage("Currently we don't have but we will launch soon");
     getUserMessage();
+    //eslint-disable-next-line
   }, []);
 
   const handleNewUserMessage = (newMessage) => {
@@ -98,6 +99,7 @@ const Widget = () => {
     return () => {
       target?.removeEventListener("click", eventHandle);
     };
+    //eslint-disable-next-line
   }, [imagePreview, showChat]);
 
   useEffect(() => {
