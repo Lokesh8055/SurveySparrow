@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Header from "./Header";
 import Messages from "./Messages";
 import Sender from "./Sender";
-import { useMessageContext } from "context/message/messageContext";
 import Body from "./Body";
 import { useGlobalStateContext } from "context/globalStateContext";
 
@@ -21,13 +20,7 @@ const Conversation = ({
   let startX, startWidth;
   const resizable = true;
 
-  const { addResponseMessage } = useMessageContext();
-
   const { show } = useGlobalStateContext();
-
-  // useEffect(() => {
-  //   addResponseMessage("Welcome");
-  // }, []);
 
   useEffect(() => {
     const containerDiv = document.getElementById("conversation-container");
