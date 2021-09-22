@@ -34,12 +34,10 @@ const Widget = () => {
   const showCloseButton = true;
 
   useEffect(() => {
-    addResponseMessage(
+    addUserMessage(
       "Is there any offline versions available for maxeon prayer?"
     );
-  }, []);
-
-  useEffect(() => {
+    addResponseMessage("Currently we don't have but we will launch soon");
     getUserMessage();
   }, []);
 
@@ -74,6 +72,7 @@ const Widget = () => {
     }
     handleSubmit?.(userInput);
     addUserMessage(userInput);
+    getUserMessage();
     handleNewUserMessage(messageResponse?.slip?.advice);
   };
 
@@ -131,6 +130,7 @@ const Widget = () => {
             handleMessageSubmit={handleMessageSubmit}
             typing={typing}
             showCloseButton={showCloseButton}
+            toggle={toggleConversation}
           />
         )}
 

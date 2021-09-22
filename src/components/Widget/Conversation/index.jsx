@@ -15,18 +15,19 @@ const Conversation = ({
   handleMessageSubmit,
   typing,
   showCloseButton,
+  toggle,
 }) => {
   const [containerDiv, setContainerDiv] = useState();
   let startX, startWidth;
   const resizable = true;
 
-  const { addResponseMessage, toggleChat } = useMessageContext();
+  const { addResponseMessage } = useMessageContext();
 
   const { show } = useGlobalStateContext();
 
-  useEffect(() => {
-    addResponseMessage("Welcome");
-  }, []);
+  // useEffect(() => {
+  //   addResponseMessage("Welcome");
+  // }, []);
 
   useEffect(() => {
     const containerDiv = document.getElementById("conversation-container");
@@ -75,7 +76,7 @@ const Conversation = ({
       onMouseDown={initResize}
       aria-live="polite"
     >
-      <Header toggleChat={toggleChat} showCloseButton={showCloseButton} />
+      <Header toggleChat={toggle} showCloseButton={showCloseButton} />
       {show ? (
         <>
           <Messages showTimeStamp={showTimeStamp} typing={typing} />

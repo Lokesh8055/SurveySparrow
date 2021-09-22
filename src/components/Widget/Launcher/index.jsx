@@ -7,7 +7,6 @@ function Launcher({ toggle, chatId, openLabel, closeLabel, showChat }) {
   const toggleChat = () => {
     toggle();
   };
-
   return (
     <button
       type="button"

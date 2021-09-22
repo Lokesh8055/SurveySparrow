@@ -29,13 +29,12 @@ const titlefs = css`
 `;
 
 const closebuttonfs = css`
-  background-color: var(--turqois-1);
+  background: transparent;
   border: 0;
   display: block;
   position: absolute;
-  right: 10px;
+  right: 25px;
   top: 20px;
-  width: 20px;
 `;
 
 const closefs = css`

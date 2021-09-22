@@ -29,8 +29,9 @@ const Header = css`
     margin: 0;
     padding: 15px 0;
   }
+
   .close-button {
-    display: none;
+    ${closebuttonfs}
   }
 
   .full-screen {
@@ -40,10 +41,6 @@ const Header = css`
 
     .title {
       ${titlefs}
-    }
-
-    .close-button {
-      ${closebuttonfs}
     }
 
     .close {
@@ -58,10 +55,6 @@ const Header = css`
 
     .title {
       ${titlefs}
-    }
-
-    .close-button {
-      ${closebuttonfs}
     }
 
     .close {

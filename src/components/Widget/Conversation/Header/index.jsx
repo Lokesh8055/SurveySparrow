@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import close from "assets/clear-button.svg";
+import close from "assets/close.svg";
 import { useGlobalStateContext } from "context/globalStateContext";
 
 const Header = ({ toggleChat, showCloseButton }) => {

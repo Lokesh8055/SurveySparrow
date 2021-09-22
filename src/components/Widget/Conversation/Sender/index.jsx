@@ -23,9 +23,11 @@ function Sender({
   const [enter, setEnter] = useState(false);
   const [firefox, setFirefox] = useState(false);
   const [height, setHeight] = useState(0);
+
   useEffect(() => {
     if (showChat && autofocus) inputRef.current?.focus();
   }, [showChat, autofocus]);
+
   useEffect(() => {
     setFirefox(isFirefox());
   }, []);
