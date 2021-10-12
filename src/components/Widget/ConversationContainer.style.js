@@ -340,6 +340,23 @@ const Sender = css`
   }
 `;
 
+const Sparrow = css`
+  .sparrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    & > * {
+      margin-right: 1rem;
+    }
+
+    p {
+      color: var(--clr-black);
+    }
+  }
+`;
+
 const ConversationContainer = css`
   background-color: var(--clr-white);
   border-radius: 10px;
@@ -366,20 +383,8 @@ const ConversationContainer = css`
   ${Body}
   //MESSAGES
   ${MessagesContainer}
-  .sparrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-
-    & > * {
-      margin-right: 1rem;
-    }
-
-    p {
-      color: var(--clr-black);
-    }
-  }
+  //SPARROW ICON
+  ${Sparrow}
   //SENDER
   ${Sender}
 `;

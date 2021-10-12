@@ -42,6 +42,34 @@ const Widget = () => {
     //eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    if (showChat) {
+      messageRef.current = document.getElementById("messages");
+    }
+    return () => {
+      messageRef.current = null;
+    };
+  }, [showChat]);
+
+  useEffect(() => {
+    const target = messageRef?.current;
+    if (imagePreview && showChat) {
+      target?.addEventListener("click", eventHandle, false);
+    }
+
+    return () => {
+      target?.removeEventListener("click", eventHandle);
+    };
+    //eslint-disable-next-line
+  }, [imagePreview, showChat]);
+
+  useEffect(() => {
+    document.body.setAttribute(
+      "style",
+      `overflow: ${visible || fullScreenMode ? "hidden" : "auto"}`
+    );
+  }, [fullScreenMode, visible]);
+
   const handleNewUserMessage = (newMessage) => {
     toggleMsgLoader();
     setTimeout(() => {
@@ -57,15 +85,6 @@ const Widget = () => {
     }
     return true;
   };
-
-  useEffect(() => {
-    if (showChat) {
-      messageRef.current = document.getElementById("messages");
-    }
-    return () => {
-      messageRef.current = null;
-    };
-  }, [showChat]);
 
   const handleMessageSubmit = (userInput) => {
     if (!userInput.trim()) {
@@ -89,25 +108,6 @@ const Widget = () => {
       openFullscreenPreview(obj);
     }
   };
-
-  useEffect(() => {
-    const target = messageRef?.current;
-    if (imagePreview && showChat) {
-      target?.addEventListener("click", eventHandle, false);
-    }
-
-    return () => {
-      target?.removeEventListener("click", eventHandle);
-    };
-    //eslint-disable-next-line
-  }, [imagePreview, showChat]);
-
-  useEffect(() => {
-    document.body.setAttribute(
-      "style",
-      `overflow: ${visible || fullScreenMode ? "hidden" : "auto"}`
-    );
-  }, [fullScreenMode, visible]);
 
   const toggleConversation = () => {
     toggleChat();
